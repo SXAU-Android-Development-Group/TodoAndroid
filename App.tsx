@@ -6,28 +6,19 @@
  */
 
 import React from "react";
-import { StyleSheet, View } from "react-native";
 import { ThemeProvider } from "@shopify/restyle";
-import theme, { Text } from "./src/utils/theme";
-import Button from "./src/components/button.tsx";
+import theme from "./src/utils/theme";
+import Navigation from "@/navigation/index.tsx";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 function App(): React.JSX.Element {
   return (
     <ThemeProvider theme={theme}>
-      <View style={styles.container}>
-        <Text variant="text3Xl">Header</Text>
-        <Button />
-      </View>
+      <SafeAreaProvider>
+        <Navigation />
+      </SafeAreaProvider>
     </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
 
 export default App;

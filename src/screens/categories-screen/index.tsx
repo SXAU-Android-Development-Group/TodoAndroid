@@ -1,0 +1,10 @@
+import { Box, Text } from "@/utils/theme";
+import React from "react";
+const CategoriesScreen = () => {
+  return (
+    <Box>
+      <Text>Categories</Text>
+    </Box>
+  );
+};
+export default CategoriesScreen;
